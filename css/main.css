@@ -16,12 +16,16 @@ Variables
 =================
 */
 :root {
-    --clr-primary-1: red;
-    --clr-primary-2: #E7ECEF;
-    --clr-primary-3: #EAEAEA;
-    --clr-primary-4: red;
-    --clr-primary-5: red;
-    --clr-primary-6: red;
+
+
+    --clr-primary-1: #0D1321;
+    --clr-primary-2: #1D2D44;
+    --clr-primary-3: #3D5A80;
+    --clr-primary-4: #577399;
+    --clr-primary-5: #748CAB;
+    --clr-primary-6: #BDD5EA;
+    --clr-primary-light: #F7F7FF;
+    --clr-second-1: #EE6C4D;
     --clr-white: white;
     --ff-primary: "vazir", sans-serif;
     --transition: all 0.3s linear;
@@ -37,18 +41,91 @@ Global Styles
 ================= 
 */
 
-*,
 ::after,
-::before {
+::before,
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--ff-primary);
     background: var(--clr-white);
     color: var(--clr-primary-1);
     line-height: 1.5rem;
     font-size: 0.875rem;
 }
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    line-height: 1.25;
+    margin-bottom: 0.75;
+    font-family: var(--ff-primary);
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+}
+
+h4 {
+    font-size: 0.875rem;
+}
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--clr-primary-3);
+}
+
+@media screen and (min-width:800px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.75rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        line-height: 1;
+    }
+}
+
