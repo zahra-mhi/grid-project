@@ -1,0 +1,54 @@
+/* 
+=================
+Fonts
+=================
+*/
+@font-face {
+    font-family: "vazir";
+    src: url(../fonts/vazir/Vazir-Medium-FD-WOL.woff2) format("woff2"),
+        url(../fonts/vazir/Vazir-Medium-FD-WOL.woff) format("woff"),
+        url(../fonts/vazir/Vazir-Medium-FD-WOL.ttf) format("truetype");
+}
+
+/* 
+=================
+Variables
+=================
+*/
+:root {
+    --clr-primary-1: red;
+    --clr-primary-2: #E7ECEF;
+    --clr-primary-3: #EAEAEA;
+    --clr-primary-4: red;
+    --clr-primary-5: red;
+    --clr-primary-6: red;
+    --clr-white: white;
+    --ff-primary: "vazir", sans-serif;
+    --transition: all 0.3s linear;
+    --radius: 0.5rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    --max-width: 1170px;
+}
+
+/* 
+=================
+Global Styles
+================= 
+*/
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--ff-primary);
+    background: var(--clr-white);
+    color: var(--clr-primary-1);
+    line-height: 1.5rem;
+    font-size: 0.875rem;
+}
