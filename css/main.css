@@ -16,8 +16,6 @@ Variables
 =================
 */
 :root {
-
-
     --clr-primary-1: #0D1321;
     --clr-primary-2: #1D2D44;
     --clr-primary-3: #3D5A80;
@@ -40,7 +38,6 @@ Variables
 Global Styles
 ================= 
 */
-
 ::after,
 ::before,
 * {
@@ -53,7 +50,7 @@ body {
     font-family: var(--ff-primary);
     background: var(--clr-white);
     color: var(--clr-primary-1);
-    line-height: 1.5rem;
+    line-height: 1.5;
     font-size: 0.875rem;
 }
 
@@ -75,7 +72,7 @@ h2,
 h3,
 h4 {
     line-height: 1.25;
-    margin-bottom: 0.75;
+    margin-bottom: 0.75rem;
     font-family: var(--ff-primary);
 }
 
@@ -129,3 +126,85 @@ p {
     }
 }
 
+
+
+
+/* 
+=================
+Navbar
+================= 
+*/
+.nav {
+    background: var(--clr-primary-5);
+    height: 4.5rem;
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.nav-center {
+    width: 100%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.nav-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    color: var(--clr-primary-2);
+}
+
+.nav-header h3 {
+    font-size: 1.75rem;
+}
+
+.nav-btn {
+    justify-self: end;
+    background: transparent;
+    border: transparent;
+    color: var(--clr-primary-2);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    display: none;
+}
+
+.navbar-fixed{
+    position: fixed;
+    width: 100%;
+    right: 0;
+    top: 0;
+    background: var(--clr-white);
+    box-shadow: var(--light-shadow);
+}
+
+@media screen and (min-width: 768px) {
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-center {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-self: end;
+        column-gap: 2rem;
+        justify-items: center;
+    }
+
+    .nav-links a {
+        color: var(--clr-primary-2);
+        transition: tr;
+    }
+
+    .nav-links a:hover{
+        color: var(--clr-primary-6);
+    }
+}
